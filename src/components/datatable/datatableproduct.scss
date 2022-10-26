@@ -44,25 +44,6 @@
         }
     }
 
-    .status {
-        padding: 5px;
-        border-radius: 5px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
-
-        &.Approved {
-            color: green;
-            background-color: rgba(0, 128, 0, 0.151);
-        }
-
-        &.Pending {
-            color: goldenrod;
-            background-color: rgba(189, 189, 3, 0.103);
-        }
-    }
-
     .cellAction {
         display: flex;
         align-items: center;
@@ -77,6 +58,7 @@
             -o-border-radius: 5px;
             color: darkblue;
             border: 1px dotted rgba(0, 0, 139, 0.596);
+            background-color: rgb(194, 194, 255);
             cursor: pointer;
         }
 
@@ -89,6 +71,7 @@
             -o-border-radius: 5px;
             color: crimson;
             border: 1px dotted rgba(220, 20, 60, 0.6);
+            background-color: rgb(254, 210, 219);
             cursor: pointer;
         }
     }

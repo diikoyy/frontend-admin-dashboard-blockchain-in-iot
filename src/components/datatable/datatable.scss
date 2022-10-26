@@ -2,7 +2,7 @@
     height: 600px;
     padding: 20px;
 
-    .datatableTitle{
+    .datatableTitle {
         width: 100%;
         font-size: 24px;
         color: gray;
@@ -24,7 +24,7 @@
             -ms-border-radius: 5px;
             -o-border-radius: 5px;
             cursor: pointer;
-}
+        }
     }
 
     .cellWithImg{
@@ -80,6 +80,7 @@
             -o-border-radius: 5px;
             color: darkblue;
             border: 1px dotted rgba(0,0,139,0.596);
+            background-color: rgb(194, 194, 255);
             cursor: pointer;
         }
 
@@ -92,6 +93,7 @@
             -o-border-radius: 5px;
             color: crimson;
             border: 1px dotted rgba(220, 20, 60, 0.6);
+            background-color: rgb(254, 210, 219);
             cursor: pointer;
         }
     }

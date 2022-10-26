@@ -8,7 +8,6 @@ export const historyColumns = [
 			return (
 				<div className="cellWithImg">
 					<img className="cellImg" src={params.row.img} alt="avatar" />
-					{params.row.username}
 					{params.row.product}
 				</div>
 			);

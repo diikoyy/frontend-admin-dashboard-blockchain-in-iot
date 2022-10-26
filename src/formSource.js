@@ -86,3 +86,49 @@ export const productInputs = [
 		placeholder: "5",
 	},
 ];
+
+export const historyInputs = [
+	{
+		id: 1,
+		label: "ID",
+		type: "text",
+		placeholder: "123456",
+	},
+	{
+		id: 2,
+		label: "Name of Product",
+		type: "text",
+		placeholder: "Apple Macbook Pro",
+	},
+	{
+		id: 3,
+		label: "Category",
+		type: "text",
+		placeholder: "Category",
+	},
+	{
+		id: 4,
+		label: "Origin",
+		type: "text",
+		placeholder: "USA",
+	},
+	{
+		id: 5,
+		label: "Unit Price",
+		type: "text",
+		placeholder: "100",
+	},
+	{
+		id: 6,
+		label: "Unit Measurement",
+		type: "text",
+		placeholder: "10 Pounds",
+	},
+	{
+		id: 7,
+		label: "Quantity",
+		type: "text",
+		placeholder: "5",
+	},
+];
+

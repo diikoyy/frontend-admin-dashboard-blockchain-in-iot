@@ -51,13 +51,28 @@
     }
 
     .datatable{
-        .datagrid{
+        .link {
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        color: rgb(100, 100, 100);
+        border-color: rgb(100, 100, 100);
+        background-color: rgb(190, 190, 190)
+        }
+        .datagrid {
             color: gray;
             border: none;
-
-            .viewButton, .deleteButton,.cellWithStatus{
-                color: gray;
-                border: none;
+            .viewButton,
+            .deleteButton {
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+                color: rgb(100, 100, 100);
+                background-color: rgb(190, 190, 190);
             }
         }
     }
@@ -67,15 +82,61 @@
     }
 
     .datatableproduct {
+        .link {
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+                color: rgb(100, 100, 100);
+                border-color: rgb(100, 100, 100);
+                background-color: rgb(190, 190, 190)
+            }
         .datagrid {
             color: gray;
             border: none;
 
             .viewButton,
-            .deleteButton,
-            .status {
-                color: gray;
-                border: none;
+            .deleteButton {
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+                color: rgb(100, 100, 100);
+                background-color: rgb(190, 190, 190);
+            }
+        }
+    }
+
+    input {
+        background-color: transparent;
+    }
+
+    .datatablehistory {
+        .link {
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+                color: rgb(100, 100, 100);
+                border-color: rgb(100, 100, 100);
+                background-color: rgb(190, 190, 190)
+            }
+        .datagrid {
+            color: gray;
+            border: none;
+
+            .viewButton,
+            .deleteButton {
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+                color: rgb(100, 100, 100);
+                background-color: rgb(190, 190, 190);
             }
         }
     }
