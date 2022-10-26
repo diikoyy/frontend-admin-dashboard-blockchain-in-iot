@@ -5,6 +5,7 @@ import { productInputs, userInputs } from "./formSource";
 
 import { DarkModeContext } from "./context/darkModeContext";
 import Home from "./pages/home/Home";
+import Listhistory from "./pages/list/Listhistory";
 import Listproduct from "./pages/list/Listproduct";
 import Listuser from "./pages/list/Listuser";
 import Login from "./pages/login/Login";
@@ -27,7 +28,7 @@ function App() {
 							<Route path=":userID" element={<Single />} />
 							<Route
 								path="new"
-								element={<New inputs={userInputs} title="Add New User" />}
+								element={<New inputs={userInputs} title="Create New User" />}
 							/>
 						</Route>
 						<Route path="products">
@@ -35,8 +36,11 @@ function App() {
 							<Route path=":productID" element={<Single />} />
 							<Route
 								path="new"
-								element={<New inputs={productInputs} title="Add New Product" />}
+								element={<New inputs={productInputs} title="Create New Product" />}
 							/>
+						</Route>
+						<Route path="history">
+							<Route index element = {<Listhistory/>}/>
 						</Route>
 					</Route>
 				</Routes>

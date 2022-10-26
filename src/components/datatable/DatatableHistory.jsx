@@ -1,14 +1,14 @@
-import "./datatableproduct.scss";
+import "./datatablehistory.scss";
 
-import { productColumns, productRows } from "../../datatableproductsource"
+import { historyColumns, historyRows } from "../../datatablehistorysource";
 
 import { DataGrid } from "@mui/x-data-grid";
 import { Link } from "react-router-dom";
 import React from "react";
 import { useState } from "react";
 
-const DatatableProducts = () => {
-	const [data, setData] = useState(productRows);
+const DatatableHistory = () => {
+	const [data, setData] = useState(historyRows);
 	const handleDelete = (id) => {
 		setData(data.filter((item) => item.id !== id));
 	};
@@ -20,7 +20,7 @@ const DatatableProducts = () => {
 			renderCell: (params) => {
 				return (
 					<div className="cellAction">
-						<Link to="/products/test" style={{ textDecoration: "none" }}>
+						<Link to="/history/test" style={{ textDecoration: "none" }}>
 							<div className="viewButton">View</div>
 						</Link>
 						<div
@@ -34,17 +34,17 @@ const DatatableProducts = () => {
 		},
 	];
 	return (
-		<div className="datatableproduct">
-			<div className="datatableproductTitle">
-				List of Products
-				<Link to="/products/new" className="link">
-					Create New Products
+		<div className="datatablehistory">
+			<div className="datatablehistoryTitle">
+				List of History
+				<Link to="/history/new" className="link">
+					Create New History
 				</Link>
 			</div>
 			<DataGrid
 				className="datagrid"
 				rows={data}
-				columns={productColumns.concat(actionColumn)}
+				columns={historyColumns.concat(actionColumn)}
 				pageSize={5}
 				rowsPerPageOptions={[5]}
 				checkboxSelection
@@ -53,4 +53,4 @@ const DatatableProducts = () => {
 	);
 };
 
-export default DatatableProducts;
+export default DatatableHistory;

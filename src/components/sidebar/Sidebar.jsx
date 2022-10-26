@@ -4,6 +4,7 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 import { DarkModeContext } from "../../context/darkModeContext"
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
+import HistoryOutlinedIcon from "@mui/icons-material/HistoryOutlined";
 import LegendToggleIcon from "@mui/icons-material/LegendToggle";
 import { Link } from "react-router-dom";
 import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
@@ -47,6 +48,12 @@ const Sidebar = () => {
 						<li>
 							<ProductionQuantityLimitsOutlinedIcon className="icon" />
 							<span>Products</span>
+						</li>
+					</Link>
+					<Link to="/history" style={{ textDecoration: "none" }}>
+						<li>
+							<HistoryOutlinedIcon className="icon" />
+							<span>History</span>
 						</li>
 					</Link>
 					<li>
