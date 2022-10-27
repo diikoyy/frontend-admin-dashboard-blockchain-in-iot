@@ -4,6 +4,22 @@
     .homeContainer{
         flex: 6;
 
+        h1{
+            justify-content: center;
+            display: flex;
+            color: gray;
+            padding: 15px;
+            margin: 5px;
+        }
+
+        .iconTitle {
+            font-size: 30px;
+            color: lightgray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         .widgets, .charts{
             display: flex;
             padding: 20px;
@@ -24,7 +40,7 @@
             font-weight: 500;
             color: gray;
             margin-bottom: 15px;
-        }
+            }
         }
     }
 }

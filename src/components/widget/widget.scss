@@ -21,18 +21,19 @@
 
         .title{
             font-weight: bold;
-            font-size: 14px;
+            font-size: 20px;
             color: rgb(160,160,160);
         }
 
         .counter{
-            font-size: 28px;
+            padding: 1px 5px;
+            font-size: 26px;
             font-weight: 300;
         }
 
         .link{
             width: max-content;
-            font-size: 12px;
+            font-size: 14px;
             border-bottom: 1px solid gray;
         }
 
@@ -51,14 +52,15 @@
         }
 
         .icon{
-            font-size: 18px;
-            padding: 5px;
+            font-size: 25px;
+            padding: 5px 15px;
             border-radius: 5px;
             -webkit-border-radius: 5px;
             -moz-border-radius: 5px;
             -ms-border-radius: 5px;
             -o-border-radius: 5px;
-            align-self: flex-end;
+            align-items: flex-end;
+            cursor: pointer;
 }
     }
 }

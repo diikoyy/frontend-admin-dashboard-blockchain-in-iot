@@ -1,8 +1,9 @@
 import "./widget.scss";
 
-import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
+import HistoryOutlinedIcon from "@mui/icons-material/HistoryOutlined";
+import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 import KeyboardArrowUpOutlinedIcon from "@mui/icons-material/KeyboardArrowUpOutlined";
-import MonetizationOnOutlined from "@mui/icons-material/MonetizationOnOutlined";
+import { Link } from "react-router-dom";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import React from "react";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
@@ -12,61 +13,66 @@ const Widget = ({ type }) => {
 
 	//temporary
 	const amount = 100;
-	const diff = 20;
+	const diff = 30;
 
 	switch (type) {
 		case "user":
 			data = {
 				title: "USERS",
 				isMoney: false,
-				link: "See all users",
+				link: (
+					<Link to="/users" style={{ textDecoration: "none" }}>
+						"See all users"
+					</Link>
+				),
 				icon: (
-					<PersonOutlineOutlinedIcon
-						className="icon"
-						style={{ color: "crimson", backgroundColor: "rgba(255,0,0,0.2)" }}
-					/>
+					<Link to="/users" style={{ textDecoration: "none" }}>
+						<PersonOutlineOutlinedIcon
+							className="icon"
+							style={{ color: "crimson", backgroundColor: "rgba(255,0,0,0.2)" }}
+						/>
+					</Link>
 				),
 			};
 			break;
-		case "order":
+		case "product":
 			data = {
-				title: "ORDERS",
+				title: "PRODUCTS",
 				isMoney: false,
-				link: "View all orders",
+				link: (
+					<Link to="/products" style={{ textDecoration: "none" }}>
+						"View all products"
+					</Link>
+				),
 				icon: (
-					<ShoppingCartOutlinedIcon
-						className="icon"
-						style={{
-							color: "goldenrod",
-							backgroundColor: "rgba(218,165,32,0.2)",
-						}}
-					/>
+					<Link to="/products" style={{ textDecoration: "none" }}>
+						<ShoppingCartOutlinedIcon
+							className="icon"
+							style={{
+								color: "goldenrod",
+								backgroundColor: "rgba(218,165,32,0.2)",
+							}}
+						/>
+					</Link>
 				),
 			};
 			break;
-		case "earning":
+		case "history":
 			data = {
-				title: "EARNINGS",
-				isMoney: true,
-				link: "View net earning",
-				icon: (
-					<MonetizationOnOutlined
-						className="icon"
-						style={{ color: "green", backgroundColor: "rgba(0,128,0,0.2)" }}
-					/>
+				title: "HISTORY",
+				isMoney: false,
+				link: (
+					<Link to="/history" style={{ textDecoration: "none" }}>
+						"View history"
+					</Link>
 				),
-			};
-			break;
-		case "balance":
-			data = {
-				title: "BALANCE",
-				isMoney: true,
-				link: "See details",
 				icon: (
-					<AccountBalanceWalletOutlinedIcon
-						className="icon"
-						style={{ color: "purple]", backgroundColor: "rgba(128,0,128,0.2)" }}
-					/>
+					<Link to="/history" style={{ textDecoration: "none" }}>
+						<HistoryOutlinedIcon
+							className="icon"
+							style={{ color: "green", backgroundColor: "rgba(0,128,0,0.2)" }}
+						/>
+					</Link>
 				),
 			};
 			break;
@@ -88,6 +94,7 @@ const Widget = ({ type }) => {
 					<KeyboardArrowUpOutlinedIcon />
 					{diff} %
 				</div>
+
 				{data.icon}
 			</div>
 		</div>

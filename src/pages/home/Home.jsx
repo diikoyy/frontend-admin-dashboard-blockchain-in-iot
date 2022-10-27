@@ -1,6 +1,7 @@
 import "./home.scss";
 
 import Chart from "../../components/chart/Chart";
+import DoubleArrowOutlinedIcon from "@mui/icons-material/DoubleArrowOutlined";
 import Featured from "../../components/featured/Featured";
 import Navbar from "../../components/navbar/Navbar";
 import React from "react";
@@ -16,18 +17,37 @@ const Home = () => {
 				<Navbar />
 				<div className="widgets">
 					<Widget type="user" />
-					<Widget type="order" />
-					<Widget type="earning" />
-					<Widget type="balance" />
+					<Widget type="product" />
+					<Widget type="history" />
 				</div>
-				<div className="charts">
+				<h1 className="title">WELCOME TO OUR PROJECT!</h1>
+				<div className="iconTitle">
+					<DoubleArrowOutlinedIcon className="iconTitle" />
+					<DoubleArrowOutlinedIcon className="iconTitle" />
+					<DoubleArrowOutlinedIcon className="iconTitle" />
+					<DoubleArrowOutlinedIcon className="iconTitle" />
+					<DoubleArrowOutlinedIcon className="iconTitle" />
+					<DoubleArrowOutlinedIcon className="iconTitle" />
+					<DoubleArrowOutlinedIcon className="iconTitle" />
+					<DoubleArrowOutlinedIcon className="iconTitle" />
+					<DoubleArrowOutlinedIcon className="iconTitle" />
+					<DoubleArrowOutlinedIcon className="iconTitle" />
+					<DoubleArrowOutlinedIcon className="iconTitle" />
+					<DoubleArrowOutlinedIcon className="iconTitle" />
+					<DoubleArrowOutlinedIcon className="iconTitle" />
+					<DoubleArrowOutlinedIcon className="iconTitle" />
+					<DoubleArrowOutlinedIcon className="iconTitle" />
+					<DoubleArrowOutlinedIcon className="iconTitle" />
+					<DoubleArrowOutlinedIcon className="iconTitle" />
+				</div>
+				{/* <div className="charts">
 					<Featured />
 					<Chart title="Last 6 Months(Revenue)" aspect={2 / 1} />
 				</div>
 				<div className="listContainer">
 					<div className="listTitle">Latest Transactions</div>
 					<Table />
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);

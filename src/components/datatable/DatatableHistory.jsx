@@ -37,9 +37,6 @@ const DatatableHistory = () => {
 		<div className="datatablehistory">
 			<div className="datatablehistoryTitle">
 				List of History
-				<Link to="/history/new" className="link">
-					Create New History
-				</Link>
 			</div>
 			<DataGrid
 				className="datagrid"

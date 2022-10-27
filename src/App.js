@@ -1,7 +1,7 @@
 import "./style/dark.scss";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { productInputs, userInputs, historyInputs } from "./formSource";
+import { historyInputs, productInputs, userInputs } from "./formSource";
 
 import { DarkModeContext } from "./context/darkModeContext";
 import Home from "./pages/home/Home";
@@ -42,10 +42,6 @@ function App() {
 						<Route path="history">
 							<Route index element={<Listhistory />} />
 							<Route path=":historyID" element={<Single />} />
-							<Route
-								path="new"
-								element={<New inputs={historyInputs} title="Create New Product" />}
-							/>
 						</Route>
 					</Route>
 				</Routes>
