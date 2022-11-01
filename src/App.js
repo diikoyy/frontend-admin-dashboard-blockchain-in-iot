@@ -97,16 +97,6 @@ function App() {
 								element={<New inputs={userInputs} title="Create New User" />}
 							/>
 						</Route>
-						{/* <Route path="products">
-							<Route index element={<Listproduct />} />
-							<Route path=":productID" element={<Single />} />
-							<Route
-								path="new"
-								element={
-									<New inputs={productInputs} title="Create New Product" />
-								}
-							/>
-						</Route> */}
 						<Route path="productbatch">
 							<Route index element={<Listproductbatch />} />
 							<Route path=":productbatchID" element={<Single />} />
