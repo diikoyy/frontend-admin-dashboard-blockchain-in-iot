@@ -1,14 +1,17 @@
-import "./datatableproduct.scss";
+import "./datatableproductbatch.scss";
 
-import { productColumns, productRows } from "../../datatableproductsource"
+import {
+	productbatchColumns,
+	productbatchRows,
+} from "../../datatableproductbatchsource";
 
 import { DataGrid } from "@mui/x-data-grid";
 import { Link } from "react-router-dom";
 import React from "react";
 import { useState } from "react";
 
-const DatatableProducts = () => {
-	const [data, setData] = useState(productRows);
+const DatatableProductBatchRetailer = () => {
+	const [data, setData] = useState(productbatchRows);
 	const handleDelete = (id) => {
 		setData(data.filter((item) => item.id !== id));
 	};
@@ -20,9 +23,6 @@ const DatatableProducts = () => {
 			renderCell: (params) => {
 				return (
 					<div className="cellAction">
-						<Link to="/products/test" style={{ textDecoration: "none" }}>
-							<div className="viewButton">View</div>
-						</Link>
 						<div
 							className="deleteButton"
 							onClick={() => handleDelete(params.row.id)}>
@@ -34,17 +34,17 @@ const DatatableProducts = () => {
 		},
 	];
 	return (
-		<div className="datatableproduct">
-			<div className="datatableproductTitle">
-				List of Products Of Manufacturer
-				<Link to="/manufacturer/products/new" className="link">
-					Create New Products
+		<div className="datatableproductbatch">
+			<div className="datatableproductbatchTitle">
+				List of Product Batch Of Retailer
+				<Link to="/retailer/newproductbatch" className="link">
+					Create New Product Batch
 				</Link>
 			</div>
 			<DataGrid
 				className="datagrid"
 				rows={data}
-				columns={productColumns.concat(actionColumn)}
+				columns={productbatchColumns.concat(actionColumn)}
 				pageSize={5}
 				rowsPerPageOptions={[5]}
 				checkboxSelection
@@ -53,4 +53,4 @@ const DatatableProducts = () => {
 	);
 };
 
-export default DatatableProducts;
+export default DatatableProductBatchRetailer;

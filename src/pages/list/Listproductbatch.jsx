@@ -1,23 +1,23 @@
 import "./list.scss";
 
-import DatatableHistory from "../../components/datatable/DatatableHistory";
+import Datatableproductbatchsource from "../../components/datatable/DatatableProductBatch";
 import { Link } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
 import React from "react";
 import Sidebar from "../../components/sidebar/Sidebar";
 
-const Listhistory = () => {
+const Listproductbatch = () => {
 	return (
 		<div className="list">
 			<Sidebar />
 			<div className="listContainer">
 				<Navbar />
-				<Link to="/history" style={{ textDecoration: "none" }}>
-					<DatatableHistory />
+				<Link to="/productbatch" style={{ textDecoration: "none" }}>
+					<Datatableproductbatchsource />
 				</Link>
 			</div>
 		</div>
 	);
 };
 
-export default Listhistory;
+export default Listproductbatch;

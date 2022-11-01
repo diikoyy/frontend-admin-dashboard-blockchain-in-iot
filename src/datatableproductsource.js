@@ -55,6 +55,7 @@ export const productRows = [
 		price: "$700",
 		measurement: "10 Pounds",
 		quantity: "50",
+		status: "Approved",
 	},
 	{
 		id: 2235235,
@@ -65,6 +66,7 @@ export const productRows = [
 		price: "$1500",
 		measurement: "20 Pounds",
 		quantity: "10",
+		status: "Pending",
 	},
 	{
 		id: 2342353,
@@ -75,6 +77,7 @@ export const productRows = [
 		price: "$300",
 		measurement: "8 Pounds",
 		quantity: "40",
+		status: "Denied",
 	},
 	{
 		id: 2357741,
@@ -85,6 +88,7 @@ export const productRows = [
 		price: "$1000",
 		measurement: "15 Pounds",
 		quantity: "70",
+		status: "Denied",
 	},
 	{
 		id: 2342355,
@@ -95,5 +99,6 @@ export const productRows = [
 		price: "$500",
 		measurement: "13 Pounds",
 		quantity: "20",
+		status: "Approved",
 	},
 ];

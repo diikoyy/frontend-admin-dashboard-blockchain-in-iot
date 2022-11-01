@@ -1,4 +1,4 @@
-import "./sidebar.scss";
+import "./sidebarhome.scss";
 
 import { DarkModeContext } from "../../context/darkModeContext";
 import DashboardIcon from "@mui/icons-material/Dashboard";
@@ -9,10 +9,10 @@ import ProductionQuantityLimitsOutlinedIcon from "@mui/icons-material/Production
 import React from "react";
 import { useContext } from "react";
 
-const Sidebar = () => {
+const SidebarHome = () => {
 	const { dispatch } = useContext(DarkModeContext);
 	return (
-		<div className="sidebar">
+		<div className="sidebarhome">
 			<div className="top">
 				<Link to="/" style={{ textDecoration: "none" }}>
 					<span className="logo">Foo_Admin</span>
@@ -26,25 +26,6 @@ const Sidebar = () => {
 						<li>
 							<DashboardIcon className="icon" />
 							<span>Dashboard</span>
-						</li>
-					</Link>
-					<p className="title">LISTS</p>
-					<Link to="/users" style={{ textDecoration: "none" }}>
-						<li>
-							<PersonOutlineOutlinedIcon className="icon" />
-							<span>Users</span>
-						</li>
-					</Link>
-					<Link to="/manufacturer/products" style={{ textDecoration: "none" }}>
-						<li>
-							<ProductionQuantityLimitsOutlinedIcon className="icon" />
-							<span>Products</span>
-						</li>
-					</Link>
-					<Link to="/productbatch" style={{ textDecoration: "none" }}>
-						<li>
-							<HistoryOutlinedIcon className="icon" />
-							<span>Product Batch</span>
 						</li>
 					</Link>
 				</ul>
@@ -61,4 +42,4 @@ const Sidebar = () => {
 	);
 };
 
-export default Sidebar;
+export default SidebarHome;

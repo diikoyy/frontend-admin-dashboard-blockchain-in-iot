@@ -4,12 +4,11 @@ import { DarkModeContext } from "../../context/darkModeContext";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import HistoryOutlinedIcon from "@mui/icons-material/HistoryOutlined";
 import { Link } from "react-router-dom";
-import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import ProductionQuantityLimitsOutlinedIcon from "@mui/icons-material/ProductionQuantityLimitsOutlined";
 import React from "react";
 import { useContext } from "react";
 
-const Sidebar = () => {
+const SidebarManufacturer = () => {
 	const { dispatch } = useContext(DarkModeContext);
 	return (
 		<div className="sidebar">
@@ -29,19 +28,13 @@ const Sidebar = () => {
 						</li>
 					</Link>
 					<p className="title">LISTS</p>
-					<Link to="/users" style={{ textDecoration: "none" }}>
-						<li>
-							<PersonOutlineOutlinedIcon className="icon" />
-							<span>Users</span>
-						</li>
-					</Link>
-					<Link to="/manufacturer/products" style={{ textDecoration: "none" }}>
+					<Link to="/manufacturer" style={{ textDecoration: "none" }}>
 						<li>
 							<ProductionQuantityLimitsOutlinedIcon className="icon" />
 							<span>Products</span>
 						</li>
 					</Link>
-					<Link to="/productbatch" style={{ textDecoration: "none" }}>
+					<Link to="/manufacturer/productbatch" style={{ textDecoration: "none" }}>
 						<li>
 							<HistoryOutlinedIcon className="icon" />
 							<span>Product Batch</span>
@@ -61,4 +54,4 @@ const Sidebar = () => {
 	);
 };
 
-export default Sidebar;
+export default SidebarManufacturer;

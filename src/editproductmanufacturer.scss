@@ -1,0 +1,16 @@
+.editproductmanufacturer {
+    display: flex;
+    width: 100%;
+
+    .editproductmanufacturerContainer {
+        flex: 6;
+        .forms{
+            display: flex;
+            color: gray;
+            .form{
+                font-size: 18px;
+                padding: 5px;
+            }
+        }
+    }
+}

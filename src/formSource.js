@@ -87,7 +87,7 @@ export const productInputs = [
 	},
 ];
 
-export const historyInputs = [
+export const productbatchInputs = [
 	{
 		id: 1,
 		label: "ID",
@@ -102,33 +102,39 @@ export const historyInputs = [
 	},
 	{
 		id: 3,
-		label: "Category",
+		label: "Manufacturer ID",
 		type: "text",
-		placeholder: "Category",
+		placeholder: "123123",
 	},
 	{
 		id: 4,
-		label: "Origin",
+		label: "Distributor ID",
 		type: "text",
-		placeholder: "USA",
+		placeholder: "234234",
 	},
 	{
 		id: 5,
-		label: "Unit Price",
+		label: "Retailer ID",
 		type: "text",
-		placeholder: "100",
+		placeholder: "345345",
 	},
 	{
 		id: 6,
-		label: "Unit Measurement",
+		label: "Production Date",
 		type: "text",
-		placeholder: "10 Pounds",
+		placeholder: "21/2/2019",
 	},
 	{
 		id: 7,
-		label: "Quantity",
+		label: "Expiration Date",
 		type: "text",
-		placeholder: "5",
+		placeholder: "11/8/2021",
+	},
+	{
+		id: 8,
+		label: "Location Entry Info",
+		type: "text",
+		placeholder: "VietNam",
 	},
 ];
 

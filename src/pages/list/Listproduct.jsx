@@ -12,7 +12,7 @@ const Listproduct = () => {
 			<Sidebar />
 			<div className="listContainer">
 				<Navbar />
-				<Link to="/products" style={{ textDecoration: "none" }}>
+				<Link to="/manufacturer/products" style={{ textDecoration: "none" }}>
 					<DatatableProducts />
 				</Link>
 			</div>

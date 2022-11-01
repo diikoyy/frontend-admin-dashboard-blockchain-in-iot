@@ -1,4 +1,4 @@
-export const historyColumns = [
+export const productbatchColumns = [
 	{ field: "id", headerName: "Tracking ID", width: 100 },
 	{
 		field: "product",
@@ -51,7 +51,7 @@ export const historyColumns = [
 ];
 
 //temporary data
-export const historyRows = [
+export const productbatchRows = [
 	{
 		id: 1143155,
 		product: "Acer Nitro 5",

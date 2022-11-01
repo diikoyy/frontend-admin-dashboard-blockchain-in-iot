@@ -1,14 +1,17 @@
-import "./datatablehistory.scss";
+import "./datatableproductbatch.scss";
 
-import { historyColumns, historyRows } from "../../datatablehistorysource";
+import {
+	productbatchColumns,
+	productbatchRows,
+} from "../../datatableproductbatchsource";
 
 import { DataGrid } from "@mui/x-data-grid";
 import { Link } from "react-router-dom";
 import React from "react";
 import { useState } from "react";
 
-const DatatableHistory = () => {
-	const [data, setData] = useState(historyRows);
+const DatatableProductBatchDistributor = () => {
+	const [data, setData] = useState(productbatchRows);
 	const handleDelete = (id) => {
 		setData(data.filter((item) => item.id !== id));
 	};
@@ -20,7 +23,7 @@ const DatatableHistory = () => {
 			renderCell: (params) => {
 				return (
 					<div className="cellAction">
-						<Link to="/history/test" style={{ textDecoration: "none" }}>
+						<Link to="/productbatch/test" style={{ textDecoration: "none" }}>
 							<div className="viewButton">View</div>
 						</Link>
 						<div
@@ -34,14 +37,14 @@ const DatatableHistory = () => {
 		},
 	];
 	return (
-		<div className="datatablehistory">
-			<div className="datatablehistoryTitle">
-				List of History
+		<div className="datatableproductbatch">
+			<div className="datatableproductbatchTitle">
+				List of Product Batch Of Distributor
 			</div>
 			<DataGrid
 				className="datagrid"
 				rows={data}
-				columns={historyColumns.concat(actionColumn)}
+				columns={productbatchColumns.concat(actionColumn)}
 				pageSize={5}
 				rowsPerPageOptions={[5]}
 				checkboxSelection
@@ -50,4 +53,4 @@ const DatatableHistory = () => {
 	);
 };
 
-export default DatatableHistory;
+export default DatatableProductBatchDistributor;
