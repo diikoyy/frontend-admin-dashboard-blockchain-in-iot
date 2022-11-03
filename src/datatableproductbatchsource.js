@@ -1,114 +1,111 @@
 export const productbatchColumns = [
 	{ field: "id", headerName: "Tracking ID", width: 100 },
 	{
-		field: "product",
-		headerName: "Product",
-		width: 180,
-		renderCell: (params) => {
-			return (
-				<div className="cellWithImg">
-					<img className="cellImg" src={params.row.img} alt="avatar" />
-					{params.row.product}
-				</div>
-			);
-		},
+		field: "products",
+		headerName: "Products",
+		width: 150,
 	},
 	{
-		field: "manufacturerid",
+		field: "manufacturerID",
 		headerName: "Manufacturer ID",
 		width: 130,
 	},
 
 	{
-		field: "distributorid",
+		field: "distributorID",
 		headerName: "Distributor ID",
 		width: 130,
 	},
 
 	{
-		field: "retailerid",
+		field: "retailerID",
 		headerName: "Retailer ID",
 		width: 130,
 	},
 
 	{
-		field: "productiondate",
-		headerName: "Production Date",
-		width: 180,
+		field: "currentLocation",
+		headerName: "Current Location",
+		width: 150,
 	},
 
 	{
-		field: "expirationdate",
-		headerName: "Expiration Date",
-		width: 180,
+		field: "destination",
+		headerName: "Destination",
+		width: 120,
 	},
 
 	{
-		field: "locationentryinfo",
-		headerName: "Location Entry Info",
+		field: "ArrivalTimestamp",
+		headerName: "Arrival Timestamp",
 		width: 160,
+	},
+	{
+		field: "status",
+		headerName: "Status",
+		width: 120,
 	},
 ];
 
 //temporary data
 export const productbatchRows = [
 	{
-		id: 1143155,
-		product: "Acer Nitro 5",
-		img: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
-		manufacturerid: "111111",
-		distributorid: "222222",
-		retailerid: "333333",
-		productiondate: "1st March 2021",
-		expirationdate: "1st January 2022",
-		locationentryinfo: "USA",
+		id: "ID1",
+		products: "Acer Nitro 5",
+		manufacturerID: "ID1",
+		distributorID: "ID2",
+		retailerID: "ID3",
+		currentLocation: "VietNam",
+		destination: "USA",
+		ArrivalTimestamp: "1/10/2021",
+		status: "Approved",
 	},
 
 	{
-		id: 2235235,
-		product: "Playstation 5",
-		img: "https://m.media-amazon.com/images/I/31JaiPXYI8L._AC_UY327_FMwebp_QL65_.jpg",
-		manufacturerid: "123456",
-		distributorid: "234567",
-		retailerid: "345678",
-		productiondate: "12nd February 2020",
-		expirationdate: "23th September 2021",
-		locationentryinfo: "Australia",
+		id: "ID2",
+		products: "Playstation 5",
+		manufacturerID: "ID1",
+		distributorID: "ID2",
+		retailerID: "ID3",
+		currentLocation: "Canada",
+		destination: "Australia",
+		ArrivalTimestamp: "21/7/2022",
+		status: "Pending",
 	},
 
 	{
-		id: 2342353,
-		product: "Redragon S101",
-		img: "https://m.media-amazon.com/images/I/71kr3WAj1FL._AC_UY327_FMwebp_QL65_.jpg",
-		manufacturerid: "110501",
-		distributorid: "010699",
-		retailerid: "200199",
-		productiondate: "13rd May 2019",
-		expirationdate: "15th April 2021",
-		locationentryinfo: "Brazil",
+		id: "ID3",
+		products: "Redragon S101",
+		manufacturerID: "ID1",
+		distributorID: "ID2",
+		retailerID: "ID3",
+		currentLocation: "Brazil",
+		destination: "UK",
+		ArrivalTimestamp: "13/4/2021",
+		status: "Denied",
 	},
 
 	{
-		id: 2357741,
-		product: "Razer Blade 15",
-		img: "https://m.media-amazon.com/images/I/71wF7YDIQkL._AC_UY327_FMwebp_QL65_.jpg",
-		manufacturerid: "050403",
-		distributorid: "020106",
-		retailerid: "070809",
-		productiondate: "25th December 2020",
-		expirationdate: "19 November 2021",
-		locationentryinfo: "VietNam",
+		id: "ID4",
+		products: "Razer Blade 15",
+		manufacturerID: "ID1",
+		distributorID: "ID2",
+		retailerID: "ID3",
+		currentLocation: "German",
+		destination: "Italy",
+		ArrivalTimestamp: "15/4/2020",
+		status: "Pending",
 	},
 
 	{
-		id: 2342355,
-		product: "ASUS ROG Strix",
-		img: "https://m.media-amazon.com/images/I/81hH5vK-MCL._AC_UY327_FMwebp_QL65_.jpg",
-		manufacturerid: "747372",
-		distributorid: "565758",
-		retailerid: "939291",
-		productiondate: "30th July 2019",
-		expirationdate: "24th June 2021",
-		locationentryinfo: "Canada",
+		id: "ID5",
+		products: "ASUS ROG Strix",
+		manufacturerID: "ID1",
+		distributorID: "ID2",
+		retailerID: "ID3",
+		currentLocation: "France",
+		destination: "Dubai",
+		ArrivalTimestamp: "17/9/2018",
+		status: "Approved",
 	},
 ];

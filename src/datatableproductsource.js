@@ -1,17 +1,9 @@
 export const productColumns = [
-	{ field: "id", headerName: "Tracking ID", width: 140 },
+	{ field: "ID", headerName: "Tracking ID", width: 140 },
 	{
-		field: "product",
-		headerName: "Product",
+		field: "name",
+		headerName: "Name",
 		width: 200,
-		renderCell: (params) => {
-			return (
-				<div className="cellWithImg">
-					<img className="cellImg" src={params.row.img} alt="avatar" />
-					{params.row.product}
-				</div>
-			);
-		},
 	},
 	{
 		field: "category",
@@ -26,14 +18,14 @@ export const productColumns = [
 	},
 
 	{
-		field: "price",
-		headerName: "Price",
+		field: "unitPrice",
+		headerName: "UnitPrice",
 		width: 120,
 	},
 
 	{
-		field: "measurement",
-		headerName: "Unit Measurement",
+		field: "unitMeasurement",
+		headerName: "UnitMeasurement",
 		width: 160,
 	},
 
@@ -42,63 +34,105 @@ export const productColumns = [
 		headerName: "Quantity",
 		width: 120,
 	},
+	{
+		field: "productionDate",
+		headerName: "ProductionDate",
+		width: 160,
+	},
+	{
+		field: "expirationDate",
+		headerName: "ExpirationDate",
+		width: 160,
+	},
+	{
+		field: "imageSource",
+		headerName: "ImageSource",
+		width: 120,
+		renderCell: (params) => {
+			return (
+				<div className="cellWithImg">
+					<img className="cellImg" src={params.row.imageSource} alt="avatar" />
+				</div>
+			);
+		},
+	},
+	{
+		field: "available",
+		headerName: "Available",
+		width: 120,
+	},
 ];
 
 //temporary data
 export const productRows = [
 	{
-		id: 1143155,
-		product: "Acer Nitro 5",
-		img: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
+		ID: "ID1",
+		name: "Acer Nitro 5",
 		category: "Metal",
 		origin: "USA",
-		price: "$700",
-		measurement: "10 Pounds",
+		unitPrice: "$700",
+		unitMeasurement: "10 Pounds",
 		quantity: "50",
-		status: "Approved",
+		productionDate: "1/10/2021",
+		expirationDate: "2/9/2021",
+		imageSource:
+			"https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
+		available: true,
 	},
 	{
-		id: 2235235,
-		product: "Playstation 5",
-		img: "https://m.media-amazon.com/images/I/31JaiPXYI8L._AC_UY327_FMwebp_QL65_.jpg",
+		ID: "ID2",
+		name: "Playstation 5",
 		category: "Diamond",
 		origin: "Dubai",
-		price: "$1500",
-		measurement: "20 Pounds",
+		unitPrice: "$1500",
+		unitMeasurement: "20 Pounds",
 		quantity: "10",
-		status: "Pending",
+		productionDate: "11/4/2022",
+		expirationDate: "2/9/2022",
+		imageSource:
+			"https://m.media-amazon.com/images/I/31JaiPXYI8L._AC_UY327_FMwebp_QL65_.jpg",
+		available: false,
 	},
 	{
-		id: 2342353,
-		product: "Redragon S101",
-		img: "https://m.media-amazon.com/images/I/71kr3WAj1FL._AC_UY327_FMwebp_QL65_.jpg",
+		ID: "ID3",
+		name: "Redragon S101",
 		category: "Silver",
 		origin: "Canada",
-		price: "$300",
-		measurement: "8 Pounds",
+		unitPrice: "$300",
+		unitMeasurement: "8 Pounds",
 		quantity: "40",
-		status: "Denied",
+		productionDate: "11/2/2020",
+		expirationDate: "22/2/2021",
+		imageSource:
+			"https://m.media-amazon.com/images/I/71kr3WAj1FL._AC_UY327_FMwebp_QL65_.jpg",
+		available: true,
 	},
 	{
-		id: 2357741,
-		product: "Razer Blade 15",
-		img: "https://m.media-amazon.com/images/I/71wF7YDIQkL._AC_UY327_FMwebp_QL65_.jpg",
+		ID: "ID4",
+		name: "Razer Blade 15",
 		category: "Gold",
 		origin: "VietNam",
-		price: "$1000",
-		measurement: "15 Pounds",
+		unitPrice: "$1000",
+		unitMeasurement: "15 Pounds",
 		quantity: "70",
-		status: "Denied",
+		productionDate: "5/4/2019",
+		expirationDate: "28/6/2021",
+		imageSource:
+			"https://m.media-amazon.com/images/I/71wF7YDIQkL._AC_UY327_FMwebp_QL65_.jpg",
+		available: true,
 	},
 	{
-		id: 2342355,
-		product: "ASUS ROG Strix",
-		img: "https://m.media-amazon.com/images/I/81hH5vK-MCL._AC_UY327_FMwebp_QL65_.jpg",
+		ID: "ID5",
+		name: "ASUS ROG Strix",
 		category: "Iron",
 		origin: "Australia",
-		price: "$500",
-		measurement: "13 Pounds",
+		unitPrice: "$500",
+		unitMeasurement: "13 Pounds",
 		quantity: "20",
-		status: "Approved",
+		productionDate: "25/11/2019",
+		expirationDate: "28/12/2021",
+		imageSource:
+			"https://m.media-amazon.com/images/I/81hH5vK-MCL._AC_UY327_FMwebp_QL65_.jpg",
+		available: false,
 	},
 ];

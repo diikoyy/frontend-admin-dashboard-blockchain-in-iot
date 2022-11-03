@@ -1,0 +1,196 @@
+
+.datatableproduct {
+    height: 600px;
+    padding: 20px;
+
+    .datatableproductTitle {
+        width: 100%;
+        font-size: 24px;
+        color: gray;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, .5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        .modal-window {
+            position: relative;
+            background-color: white;
+            padding: 4em 2em;
+            }
+        .modal-header {
+            padding: 5px;
+            border-bottom: 1px solid green;
+        }
+
+        .modal-title {
+            margin: 0;
+            line-height: 5px;
+        }
+
+        .modal-body {
+            position: relative;
+            padding: 5px;
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: lightcyan;
+            background-clip: padding-box;
+            border: 1px solid cyan;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            -webkitbox-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+            box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+        }
+
+        .modal-footer {
+            padding: 5px;
+            text-align: right; // right align buttons
+            border-top: 1px solid lightgreen;
+
+            // Properly space out buttons
+            .btn+.btn {
+                margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
+                margin-left: 5px;
+            }
+
+            // but override that for button groups
+            .btn-group .btn+.btn {
+                margin-left: -1px;
+            }
+
+            // and override it for block buttons as well
+            .btn-block+.btn-block {
+                margin-left: 0;
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: -30px;
+            right: 0;
+        }
+    }
+    
+        .link {
+            text-decoration: none;
+            color: green;
+            font-size: 16px;
+            font-weight: 400;
+            border: 1px solid green;
+            padding: 5px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            cursor: pointer;
+        }
+
+    }
+
+    .cellWithImg {
+        display: flex;
+        align-items: center;
+
+        .cellImg {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+    }
+
+    .status {
+        padding: 5px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+
+        &.Approved {
+            color: green;
+            background-color: rgba(0, 128, 0, 0.151);
+        }
+
+        &.Pending {
+            color: goldenrod;
+            background-color: rgba(189, 189, 3, 0.103);
+        }
+
+        &.Denied {
+            color: crimson;
+            background-color: rgba(255, 0, 0, 0.05);
+        }
+    }
+
+    .available {
+        padding: 5px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+
+        &.true {
+            color: green;
+            background-color: rgba(0, 128, 0, 0.151);
+        }
+
+        &.false {
+            color: crimson;
+            background-color: rgba(255, 0, 0, 0.05);
+        }
+    }
+
+    .cellAction {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .editButton {
+            padding: 2px 5px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            color: darkblue;
+            border: 1px dotted rgba(0, 0, 139, 0.596);
+            background-color: rgb(194, 194, 255);
+            cursor: pointer;
+        }
+
+        .deleteButton {
+            padding: 2px 5px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            color: crimson;
+            border: 1px dotted rgba(220, 20, 60, 0.6);
+            background-color: rgb(254, 210, 219);
+            cursor: pointer;
+        }
+    }
+}

@@ -23,9 +23,6 @@ const DatatableProductBatchManufacturer = () => {
 			renderCell: (params) => {
 				return (
 					<div className="cellAction">
-						<Link to="/productbatch/test" style={{ textDecoration: "none" }}>
-							<div className="viewButton">View</div>
-						</Link>
 						<div
 							className="deleteButton"
 							onClick={() => handleDelete(params.row.id)}>
@@ -47,6 +44,7 @@ const DatatableProductBatchManufacturer = () => {
 			<DataGrid
 				className="datagrid"
 				rows={data}
+				getRowId={(row) => row.id}
 				columns={productbatchColumns.concat(actionColumn)}
 				pageSize={5}
 				rowsPerPageOptions={[5]}

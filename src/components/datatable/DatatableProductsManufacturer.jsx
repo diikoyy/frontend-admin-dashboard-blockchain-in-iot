@@ -1,37 +1,27 @@
-import "./datatableproduct.scss";
+import "./datatableproductsmanufacturer.scss";
 
+import { Button, Modal } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
 import { productColumns, productRows } from "../../datatableproductsource";
 
 import { DataGrid } from "@mui/x-data-grid";
+import EditForm from "../../pages/edit/EditForm";
 import { Link } from "react-router-dom";
-import React from "react";
-import { useState } from "react";
-import { EditProductManufacturer } from "../../pages/edit/EditProductManufacturer";
-import { Button } from "react-bootstrap";
 
-const DatatableProductsManufacturer = () => {
+const DatatableProductsManufacturer = (manufacturer) => {
 	const [data, setData] = useState(productRows);
 	const handleDelete = (id) => {
 		setData(data.filter((item) => item.id !== id));
 	};
 
-const handleEdit = (
-		id,
-		product,
-		category,
-		origin,
-		price,
-		measurement,
-		quantity
-) => {
-		setData(data.map((item) => item.id === id));
-		setData(data.map((item) => item.product === product));
-		setData(data.map((item) => item.category === category));
-		setData(data.map((item) => item.origin === origin));
-		setData(data.map((item) => item.price === price));
-		setData(data.map((item) => item.measurement === measurement));
-		setData(data.map((item) => item.quantity === quantity));
-	};
+	const [show, setShow] = useState(false);
+
+	const handleShow = () => setShow(true);
+	const handleClose = () => setShow(false);
+
+	useEffect(() => {
+		handleClose();
+	}, [manufacturer]);
 
 	const actionColumn = [
 		{
@@ -41,26 +31,9 @@ const handleEdit = (
 			renderCell: (params) => {
 				return (
 					<div className="cellAction">
-						<Link
-							to="/manufacturer/editproduct"
-							style={{ textDecoration: "none" }}>
-							<Button
-								className="editButton"
-								onClick={() =>
-									handleEdit(
-
-										params.id,
-										params.product,
-										params.category,
-										params.origin,
-										params.price,
-										params.measurement,
-										params.quantity
-									)
-								}>
-								Edit
-							</Button>
-						</Link>
+						{/* <Button className="editButton" onClick={handleShow}>
+							Edit
+						</Button> */}
 						<div
 							className="deleteButton"
 							onClick={() => handleDelete(params.row.id)}>
@@ -71,6 +44,8 @@ const handleEdit = (
 			},
 		},
 	];
+
+
 	return (
 		<div className="datatableproduct">
 			<div className="datatableproductTitle">
@@ -82,11 +57,32 @@ const handleEdit = (
 			<DataGrid
 				className="datagrid"
 				rows={data}
+				getRowId={(row) => row.ID}
 				columns={productColumns.concat(actionColumn)}
-				pageSize={5}
-				rowsPerPageOptions={[5]}
+				pageSize={11}
+				rowsPerPageOptions={[11]}
 				checkboxSelection
 			/>
+			<div className="container">
+				<Modal
+					size="lg"
+					aria-labelledby="contained-modal-title-vcenter"
+					centered
+					show={show}
+					onHide={handleClose}>
+					<Modal.Header closeButton>
+						<Modal.Title id="contained-modal-title-vcenter">Edit</Modal.Title>
+					</Modal.Header>
+					<Modal.Body>
+						<EditForm props={manufacturer} />
+					</Modal.Body>
+					<Modal.Footer>
+						<Button variant="danger" onClick={handleClose}>
+							Close Button
+						</Button>
+					</Modal.Footer>
+				</Modal>
+			</div>
 		</div>
 	);
 };

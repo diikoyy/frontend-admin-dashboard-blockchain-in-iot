@@ -1,28 +1,31 @@
 import "./style/dark.scss";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import React from "react";
+import ManufacturerContextProvider, {
+	ManufacturerContext,
+} from "./context/ManufacturerContext";
 import { productInputs, productbatchInputs, userInputs } from "./formSource";
 
 import { DarkModeContext } from "./context/darkModeContext";
 import Distributor from "./pages/distributor/Distributor";
+import EditProductManufacturer from "./EditProductManufacturer";
 import Home from "./pages/home/Home";
 import Listproductbatch from "./pages/list/Listproductbatch";
+import Listproductbatchdistributor from "./pages/list/Listproductbatchretailer";
 import Listproductbatchmanufacturer from "./pages/list/Listproductbatchmanufacturer";
+import Listproductbatchretailer from "./pages/list/Listproductbatchretailer";
+import Listproductretailer from "./pages/list/Listproductretailer";
 import Listuser from "./pages/list/Listuser";
 import Login from "./pages/login/Login";
 import Manufacturer from "./pages/manufacturer/Manufacturer";
 import New from "./pages/new/New";
 import NewManufacturerProductBatch from "./pages/new/NewManufacturerProductBatch";
 import NewManufacturerProducts from "./pages/new/NewManufacturerProducts";
+import NewRetailerProductBatch from "./pages/new/NewRetailerProductBatch";
+import React from "react";
 import Retailer from "./pages/retailer/Retailer";
 import Single from "./pages/single/Single";
 import { useContext } from "react";
-import EditProductManufacturer from "./EditProductManufacturer";
-import Listproductbatchdistributor from "./pages/list/Listproductbatchretailer";
-import Listproductbatchretailer from "./pages/list/Listproductbatchretailer";
-import NewRetailerProductBatch from "./pages/new/NewRetailerProductBatch";
-import Listproductretailer from "./pages/list/Listproductretailer";
 
 function App() {
 	// let [dogImage, setDogImage] = useState(null);
@@ -43,6 +46,7 @@ function App() {
 						<Route path="login" element={<Login />} />
 						<Route path="manufacturer">
 							<Route index element={<Manufacturer />} />
+
 							<Route
 								path="newproduct"
 								element={
@@ -52,7 +56,6 @@ function App() {
 									/>
 								}
 							/>
-							<Route path="editproduct" element={<EditProductManufacturer />} />
 							<Route
 								path="productbatch"
 								index

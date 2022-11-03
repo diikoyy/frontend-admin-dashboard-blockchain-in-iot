@@ -12,12 +12,17 @@
             margin: 5px;
         }
 
-        .iconTitle {
-            font-size: 30px;
-            color: lightgray;
+        .center {
             display: flex;
             align-items: center;
             justify-content: center;
+            color: gray;
+        }
+
+        .iconTitle {
+            margin: 0 5px;
+            padding: 3px;
+            font-size: 25px;
         }
 
         .widgets,
